@@ -1,0 +1,17 @@
+{
+  "name": "node-graphql-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "start": "",
+    "lint": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tatyana404/node-graphql-service"
+  },
+  "keywords": ["nodejs", "tatyana404"],
+  "author": "tatyana404",
+  "license": "ISC"
+}
