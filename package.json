@@ -2,10 +2,10 @@
   "name": "node-graphql-service",
   "version": "1.0.0",
   "description": "",
-  "main": "app.ts",
+  "main": "main.ts",
   "scripts": {
-    "start": "",
-    "lint": ""
+    "start": "nodemon",
+    "lint": "eslint \"src/*.ts\" \"src/**/**/*.ts\" \"src/**/**/**/*.ts\" --fix"
   },
   "repository": {
     "type": "git",
@@ -13,5 +13,16 @@
   },
   "keywords": ["nodejs", "tatyana404"],
   "author": "tatyana404",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.1.0",
+    "nodemon": "^2.0.18",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  }
 }
