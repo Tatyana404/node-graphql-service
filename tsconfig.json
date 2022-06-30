@@ -9,6 +9,11 @@
     "target": "es6",
     "strict": true
   },
-  "include": ["src/**/*.ts"],
+  "include": [
+    "src/*.ts",
+    "src/types/*.ts",
+    "src/modules/**/*.ts",
+    "src/modules/**/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }
