@@ -5,7 +5,7 @@
   "main": "main.ts",
   "scripts": {
     "start": "nodemon",
-    "lint": "eslint \"src/*.ts\" \"src/**/**/*.ts\" \"src/**/**/**/*.ts\" --fix"
+    "lint": "eslint \"src/*.ts\" \"src/types/*.ts\" \"src/modules/**/*.ts\" \"src/modules/**/**/*.ts\" --fix"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.30.0",
     "@typescript-eslint/parser": "^5.30.0",
+    "dotenv": "^16.0.1",
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.1.0",
@@ -24,5 +25,10 @@
     "prettier": "^2.7.1",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "apollo-datasource-rest": "^3.6.1",
+    "apollo-server": "^3.9.0",
+    "graphql": "^16.5.0"
   }
 }
