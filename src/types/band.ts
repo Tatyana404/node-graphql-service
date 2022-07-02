@@ -1,4 +1,5 @@
-interface Member {
+export interface Member {
+  _id: string;
   artist: string;
   instrument: string;
   years: string[];
