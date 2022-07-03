@@ -13,6 +13,29 @@ export const Resolvers = {
       { dataSources }: { dataSources: any }
     ) => await dataSources.usersApi.loginUser(email, password)
   },
+  Mutation: {
+    register: async (
+      _: undefined,
+      {
+        firstName,
+        lastName,
+        password,
+        email
+      }: {
+        firstName: string
+        lastName: string
+        password: string
+        email: string
+      },
+      { dataSources }: { dataSources: any }
+    ) =>
+      await dataSources.usersApi.registerUser(
+        firstName,
+        lastName,
+        password,
+        email
+      )
+  },
   User: {
     id: (parent: User) => parent._id,
     secondName: (parent: User) => parent.lastName

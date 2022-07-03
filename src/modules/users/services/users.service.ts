@@ -16,4 +16,18 @@ export class Api extends RESTDataSource {
       password
     })
   }
+
+  async registerUser (
+    firstName: string,
+    lastName: string,
+    password: string,
+    email: string
+  ) {
+    return await this.post('/register', {
+      firstName,
+      lastName,
+      password,
+      email
+    })
+  }
 }
