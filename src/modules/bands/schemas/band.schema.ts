@@ -1,7 +1,8 @@
-import { gql } from "apollo-server";
+import { gql } from 'apollo-server'
 
 export const Schema = gql`
   type Member {
+    id: ID!
     artist: String
     instrument: String
     years: [String]
@@ -13,7 +14,7 @@ export const Schema = gql`
     origin: String
     members: [Member]
     website: String
-    genres: String
+    genres: [Genre]
   }
 
   type BandsData {
@@ -25,5 +26,6 @@ export const Schema = gql`
 
   type Query {
     bands: BandsData
+    band(id: ID!): Band
   }
-`;
+`

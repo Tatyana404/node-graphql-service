@@ -21,5 +21,6 @@ export const Schema = gql`
 
   type Query {
     albums: AlbumsData
+    album(id: ID!): Album
   }
 `;

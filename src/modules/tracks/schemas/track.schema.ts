@@ -1,4 +1,4 @@
-import { gql } from "apollo-server";
+import { gql } from 'apollo-server'
 
 export const Schema = gql`
   type Track {
@@ -20,5 +20,6 @@ export const Schema = gql`
 
   type Query {
     tracks: TracksData
+    track(id: ID!): Track
   }
-`;
+`

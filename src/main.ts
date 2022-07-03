@@ -16,6 +16,7 @@ const server = new ApolloServer({
       genresApi: new api.genres(),
       tracksApi: new api.tracks(),
       bandsApi: new api.bands(),
+      usersApi: new api.users()
     };
   },
 });

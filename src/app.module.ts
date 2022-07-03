@@ -13,7 +13,7 @@ export const typeDefs = [
   Genres.Schema,
   Tracks.Schema,
   Bands.Schema,
-  Users.Schema,
+  Users.Schema
 ];
 
 export const resolvers = [
@@ -22,6 +22,7 @@ export const resolvers = [
   Genres.Resolvers,
   Tracks.Resolvers,
   Bands.Resolvers,
+  Users.Resolvers
 ];
 
 export const api = {
@@ -30,4 +31,5 @@ export const api = {
   genres: Genres.Api,
   tracks: Tracks.Api,
   bands: Bands.Api,
+  users: Users.Api
 };

@@ -18,5 +18,6 @@ export const Schema = gql`
 
   type Query {
     genres: GenresData
+    genre(id: ID!): Genre
   }
 `;
