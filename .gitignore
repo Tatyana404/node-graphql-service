@@ -1,6 +1,5 @@
 .*
 !.gitignore
-!.eslintrc.js
 !.env.example
 
 /node_modules
