@@ -11,23 +11,10 @@ export class Api extends RESTDataSource {
   }
 
   async loginUser (email: string, password: string) {
-    return await this.post('/login', {
-      email,
-      password
-    })
+    return await this.post('/login', { email, password })
   }
 
-  async registerUser (
-    firstName: string,
-    lastName: string,
-    password: string,
-    email: string
-  ) {
-    return await this.post('/register', {
-      firstName,
-      lastName,
-      password,
-      email
-    })
+  async registerUser (firstName: string, lastName: string, password: string, email: string) {
+    return await this.post('/register', { firstName, lastName, password, email })
   }
 }

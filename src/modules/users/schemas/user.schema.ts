@@ -10,7 +10,7 @@ export const Schema = gql`
   }
 
   type Jwt {
-    jwt: String!
+    jwt: String
   }
 
   type Query {
@@ -19,11 +19,6 @@ export const Schema = gql`
   }
 
   type Mutation {
-    register(
-      firstName: String!
-      lastName: String!
-      password: String!
-      email: String!
-    ): User
+    register(firstName: String!, lastName: String!, password: String!, email: String!): User
   }
 `
