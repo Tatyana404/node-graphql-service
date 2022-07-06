@@ -13,6 +13,7 @@ export const Resolvers = {
   },
   
   Genre: {
-    id: (parent: Genre) => parent._id
+    id: (parent: Genre) => parent._id,
+    year: (parent: Genre) => parseInt(parent.year, 10)
   }
 }
