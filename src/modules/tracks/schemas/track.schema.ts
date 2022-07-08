@@ -4,7 +4,8 @@ export const Schema = gql`
   type Track {
     id: ID!
     title: String!
-    albums: [Album]
+    album: Album
+    artists: [Artist]
     bands: [Band]
     duration: Int
     released: Int
@@ -18,8 +19,19 @@ export const Schema = gql`
     total: Int
   }
 
+  type TracksRemove {
+    acknowledged: String
+    deletedCount: Int
+  }
+
   type Query {
-    tracks: TracksData
+    tracks(limit: Int, offset: Int): TracksData
     track(id: ID!): Track
+  }
+
+  type Mutation {
+    createTrack(title: String!, albumId: ID, artistsIds: [ID], bandsIds: [ID], duration: Int, released: Int, genresIds: [ID]): Track
+    updateTrack(id: ID!, title: String, albumId: ID, artistsIds: [ID], bandsIds: [ID], duration: Int, released: Int, genresIds: [ID]): Track
+    deleteTrack(id: ID!): TracksRemove
   }
 `
