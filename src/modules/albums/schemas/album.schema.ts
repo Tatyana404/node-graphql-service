@@ -1,4 +1,4 @@
-import { gql } from "apollo-server";
+import { gql } from 'apollo-server'
 
 export const Schema = gql`
   type Album {
@@ -19,8 +19,19 @@ export const Schema = gql`
     total: Int
   }
 
+  type AlbumsRemove {
+    acknowledged: String
+    deletedCount: Int
+  }
+
   type Query {
-    albums: AlbumsData
+    albums(limit: Int, offset: Int): AlbumsData
     album(id: ID!): Album
   }
-`;
+
+  type Mutation {
+    createAlbum(name: String!, released: Int, artistsIds: [ID], bandsIds: [ID], trackIds: [ID], genresIds: [ID], image: String): Album
+    updateAlbum(id: ID!, name: String, released: Int, artistsIds: [ID], bandsIds: [ID], trackIds: [ID], genresIds: [ID], image: String): Album
+    deleteAlbum(id: ID!): AlbumsRemove
+  }
+`
