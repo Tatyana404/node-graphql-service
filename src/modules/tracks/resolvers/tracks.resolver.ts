@@ -14,7 +14,7 @@ export const Resolvers = {
 
   Track: {
     id: (parent: Track) => parent._id,
-    album: async ({ albumId }: { albumId: string }, __: Record<string, never>, { dataSources }: { dataSources: any }) => await dataSources.albumsApi.getAlbum(albumId),
+    album: async ({ albumId: id }: { albumId: string }, __: Record<string, never>, { dataSources }: { dataSources: any }) => await dataSources.albumsApi.getAlbum(id),
     artists: async (parent: Track, __: Record<string, never>, { dataSources }: { dataSources: any }) => await Promise.all(parent.artistsIds.map((id: string) => dataSources.artistsApi.getArtist(id))),
     bands: async (parent: Track, __: Record<string, never>, { dataSources }: { dataSources: any }) => await Promise.all(parent.bandsIds.map((id: string) => dataSources.bandsApi.getBand(id))),
     genres: async (parent: Track, __: Record<string, never>, { dataSources }: { dataSources: any }) => await Promise.all(parent.genresIds.map((id: string) => dataSources.genresApi.getGenre(id)))
