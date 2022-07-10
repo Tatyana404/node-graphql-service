@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "module": "commonjs",
+    "sourceMap": true,
+    "target": "es6",
+    "strict": true
+  },
+  "include": [
+    "src/*.ts",
+    "src/types/*.ts",
+    "src/modules/**/*.ts",
+    "src/modules/**/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}

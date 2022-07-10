@@ -2,10 +2,9 @@
   "name": "node-graphql-service",
   "version": "1.0.0",
   "description": "",
-  "main": "app.ts",
+  "main": "main.ts",
   "scripts": {
-    "start": "",
-    "lint": ""
+    "start": "nodemon"
   },
   "repository": {
     "type": "git",
@@ -13,5 +12,16 @@
   },
   "keywords": ["nodejs", "tatyana404"],
   "author": "tatyana404",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.18",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "apollo-datasource-rest": "^3.6.1",
+    "apollo-server": "^3.9.0",
+    "graphql": "^16.5.0"
+  }
 }
