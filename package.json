@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.ts",
   "scripts": {
-    "start": "concurrently \"cd node-graphql-microservices && npm run run:all\" \"nodemon\""
+    "start": "concurrently \"cd microservices && npm run run:all\" \"nodemon\""
   },
   "repository": {
     "type": "git",
